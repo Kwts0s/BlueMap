@@ -45,6 +45,16 @@
       cursor: pointer;
     }
 
+    #warning {
+      background-image: url(img/shallow.svg);
+      background-size: cover;
+      width: 1.6rem;
+
+      height: 1.6rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
     /* #marker1 {
       background-image: url(img/pin.png);
       background-size: cover;
@@ -144,6 +154,41 @@
       z-index:100 ;
     }
 
+    #logo{
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 0%;
+      width:100vw;
+      
+      
+    }
+    .logo-img{
+      width: 10vw;
+      background-color: #0bb4aa;
+      border-radius: 25px;
+      margin-bottom: 5%;
+
+    }
+    @media screen and (max-width: 1165px) {
+      .logo-img{
+      width: 20vw;
+      background-color: #0bb4aa;
+      border-radius: 25px;
+      margin-bottom: 10%;
+
+    }
+    }
+    @media screen and (max-width: 650px) {
+          .logo-img{
+          width: 40vw;
+          background-color: #0bb4aa;
+          border-radius: 25px;
+          margin-bottom: 10%;
+
+        }
+    }
+
     
   </style>
 </head>
@@ -154,6 +199,9 @@
   <nav id="menu">
   </nav>
   <div id="map"></div>
+  <div id="logo">
+    <a class="logo-btn" href="https://blue-bliss.gr/" target="_blank"><img src="img/logo-map.png" alt="" class="logo-img"></a>
+  </div>
   <script src="index.js"></script>
 
   <script>

@@ -18,7 +18,7 @@ map.addControl(
     showUserHeading: true
   })
 );
-/////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////// BEACHES
 const beaches = [
   {
     name: 'Kanoula Beach',
@@ -59,6 +59,49 @@ const beaches = [
     name: 'Harami Beach',
     img: 'img/harami.jpg',
     lngLat: [20.131320,39.235916]
+  },
+  {
+    name: 'Kavos Beach',
+    img: 'img/kavos.jpg',
+    lngLat: [20.118617,39.382892]
+  },
+  {
+    name: 'Bouka Beach',
+    img: 'img/mpouka.jpg',
+    lngLat: [20.086849,39.433575]
+  },
+  {
+    name: 'Notos Beach',
+    img: 'img/notos.jpg',
+    lngLat: [20.003840,39.448356]
+  },
+  {
+    name: 'Arkoudilas Beach',
+    img: 'img/arkoudilas.jpg',
+    lngLat: [20.101000,39.366388]
+  },
+  {
+    name: 'Marathias Beach',
+    img: 'img/marathias.jpg',
+    lngLat: [19.983986,39.414223]
+  }
+  ,
+  {
+    name: 'Agios Petros Beach',
+    img: 'img/petros.jpg',
+    lngLat: [19.700627,39.671777]
+  }
+  ,
+  {
+    name: 'La Grotta Beach',
+    img: 'img/grotta.jpg',
+    lngLat: [19.718777,39.673866]
+  }
+  ,
+  {
+    name: 'Moraitika Beach',
+    img: 'img/moraitika.jpg',
+    lngLat: [19.928577,39.484998]
   }
 
 ]
@@ -81,7 +124,7 @@ beaches.forEach(({ name, lngLat, img }) => {
 
 })
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////// LANDMARKS
 
 
 const landmarks = [
@@ -126,6 +169,31 @@ landmarks.forEach(({ name, lngLat, img }) => {
 
 })
 
+///////////////////////////////////////////// WARNINGS
+const warnings = [
+  {
+    lngLat: [20.225197,39.398572]
+  },
+  {
+    lngLat: [20.235161,39.399938]
+  },
+  
+
+]
+
+warnings.forEach(({ lngLat }) => {
+
+  // create DOM element for the marker
+  const warn= document.createElement('div');
+ warn.id = 'warning';
+
+  // create the marker
+  new mapboxgl.Marker(warn)
+    .setLngLat(lngLat)
+    .addTo(map);
+
+})
+
 
 map.on('load', () => {
   // Add a data source containing GeoJSON data.
@@ -135,30 +203,26 @@ map.on('load', () => {
       'type': 'Feature',
       'geometry': {
         'type': 'Polygon',
-        // These coordinates outline Maine.
+        // These coordinates outline Play Area.
         'coordinates': [
           [
-            [20.073738, 39.463367],
-            [20.124893, 39.380089],
+            [20.073738, 39.463367], //Lefkimmi Nose
+            [20.124893, 39.380089], //Kavos
             [20.109444, 39.353680],
-            [19.861565, 39.451305],
-            [20.119400, 39.224474],
-            [20.161285, 39.179645],
-            [20.243340, 39.129028],
-            [20.264969, 39.142942],
-            [20.238533, 39.400089],
-            [20.232439, 39.410833],
+            [20.001040, 39.396607],
+            [19.966192, 39.418810],
+            [19.911389, 39.428536], //Agios Georgios edge
+            [20.075111, 39.318628],
+            [20.277801, 39.375943], //Perdika
+            [20.263038, 39.390803],
+            [20.240378, 39.396109],
+            [20.232439, 39.410833], //Syvota Port
             [20.202141, 39.449185],
-            [20.204887, 39.511193],
-            [20.138969, 39.558854],
-            [20.175362, 39.619177],
-            [19.981041, 39.687374],
-            [19.927483, 39.626053],
-            [19.918556, 39.541382],
-            [19.939156, 39.479401],
-            [20.002327, 39.461909],
-            [20.019493, 39.441761],
-            [20.073738, 39.463367]
+            [20.084896, 39.493841],
+            [19.999065, 39.461776], //Kouspades
+            [20.021038, 39.437386],
+            [20.042410, 39.440634],
+            [20.073738, 39.463367]   //Lefkimmi Nose
           ]
         ]
       }
