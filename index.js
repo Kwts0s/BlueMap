@@ -63,7 +63,7 @@ const beaches = [
   {
     name: 'Kavos Beach',
     img: 'img/kavos.jpg',
-    lngLat: [20.118193,39.383651]
+    lngLat: [20.114293,39.386624]
   },
   {
     name: 'Bouka Beach',
@@ -84,8 +84,12 @@ const beaches = [
     name: 'Marathias Beach',
     img: 'img/marathias.jpg',
     lngLat: [19.983986,39.414223]
-  }
-  ,
+  },
+  {
+    name: 'Lefkimmi',
+    img: 'img/lefk.jpg',
+    lngLat: [20.096971, 39.415188]
+  },
 
 ]
 
@@ -111,11 +115,6 @@ beaches.forEach(({ name, lngLat, img }) => {
 
 
 const landmarks = [
-  {
-    name: 'Lefkimmi Port',
-    img: 'img/lefk.jpg',
-    lngLat: [20.096971, 39.415188]
-  },
   {
     name: 'Sivota',
     img: 'img/sivot.jpg',
