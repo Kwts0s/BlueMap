@@ -63,7 +63,7 @@ const beaches = [
   {
     name: 'Kavos Beach',
     img: 'img/kavos.jpg',
-    lngLat: [20.118617,39.382892]
+    lngLat: [20.118193,39.383651]
   },
   {
     name: 'Bouka Beach',
@@ -86,23 +86,6 @@ const beaches = [
     lngLat: [19.983986,39.414223]
   }
   ,
-  {
-    name: 'Agios Petros Beach',
-    img: 'img/petros.jpg',
-    lngLat: [19.700627,39.671777]
-  }
-  ,
-  {
-    name: 'La Grotta Beach',
-    img: 'img/grotta.jpg',
-    lngLat: [19.718777,39.673866]
-  }
-  ,
-  {
-    name: 'Moraitika Beach',
-    img: 'img/moraitika.jpg',
-    lngLat: [19.928577,39.484998]
-  }
 
 ]
 
@@ -177,6 +160,18 @@ const warnings = [
   {
     lngLat: [20.235161,39.399938]
   },
+  {
+    lngLat:[20.235365,39.395879]
+  },
+  {
+    lngLat:[20.241787,39.396721]
+  },
+  {
+    lngLat:[20.213326,39.446123]
+  },
+  {
+    lngLat:[20.070584,39.465040]
+  }
   
 
 ]
@@ -194,6 +189,29 @@ warnings.forEach(({ lngLat }) => {
 
 })
 
+///////////////////////////////////////// HQ
+const hq = [
+  {
+    lngLat: [20.119202,39.382266]
+  },
+  
+  
+
+]
+
+hq.forEach(({ lngLat }) => {
+
+  // create DOM element for the marker
+  const hQ= document.createElement('div');
+ hQ.id = 'hq';
+
+  // create the marker
+  new mapboxgl.Marker(hQ)
+    .setLngLat(lngLat)
+    .addTo(map);
+
+})
+
 
 map.on('load', () => {
   // Add a data source containing GeoJSON data.
@@ -206,7 +224,7 @@ map.on('load', () => {
         // These coordinates outline Play Area.
         'coordinates': [
           [
-            [20.073738, 39.463367], //Lefkimmi Nose
+            [20.070584, 39.465040], //Lefkimmi Nose
             [20.124893, 39.380089], //Kavos
             [20.109444, 39.353680],
             [20.001040, 39.396607],
@@ -222,7 +240,7 @@ map.on('load', () => {
             [19.999065, 39.461776], //Kouspades
             [20.021038, 39.437386],
             [20.042410, 39.440634],
-            [20.073738, 39.463367]   //Lefkimmi Nose
+            [20.070584, 39.465040]   //Lefkimmi Nose
           ]
         ]
       }
